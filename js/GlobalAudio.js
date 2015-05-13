@@ -14,17 +14,14 @@ var BASE = BASE || {};
  * */
 BASE.namespace = function(_name) {
 	var parts = _name.split('.'), i, size, parent = BASE;
-	//去掉全局变量
 	if(parts[0] === 'BASE'){
 		parts = parts.slice(1);
 	}
 	size = parts.length;
 	for(i = 0; i < size; i++){
-		//不存在就建一个空对象
 		if(typeof parent[parts[i]] === 'undefined'){
 			parent[parts[i]] = {};
 		}
-		//层层深入
 		parent = parent[parts[i]];
 	}
 	return parent;
