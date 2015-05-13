@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>html5Audio</title>
+	<link rel="stylesheet" href="./css/common.css"/>
+	<script>
+		function loaded() {
+			var AlobalAudio = BASE.COM.GlobalAudio.init();
+		}
+	</script>
+</head>
+
+<body onload="loaded()">
+<div id="globalAudio" class="globalAudio none">
+	<audio src="source/medias/iphone.mp3" preload="auto" loop></audio>
+	<b class="AudioIcons"></b>
+	<span class="AudioTips"></span>
+</div>
+<div id="test"></div>
+<script src="./js/GlobalAudio.js"></script>
+</body>
+</html>

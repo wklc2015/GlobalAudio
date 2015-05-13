@@ -1,0 +1,174 @@
+@charset "utf-8";
+/*
+ * ---------------------------------------------
+ * website:
+ * filename: common.css
+ * revision: 1.0
+ * createdate: 2015-04-10
+ * author: lc
+ * description: 公共样式
+ * ---------------------------------------------
+ */
+/***********************************************************************
+* reset style
+*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+}
+
+html {
+	font: 50px 'Microsoft Yahei', sans-serif;
+	-webkit-text-size-adjust: none;
+	background-color: #555;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	outline: none;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+img { border: none; }
+
+ul,
+ol { list-style: none; }
+
+/***********************************************************************
+* common class
+*/
+.fb { font-weight: bold; }
+
+.bc { margin: 0 auto; }
+
+.tc { text-align: center; }
+
+.tl { text-align: left; }
+
+.tr { text-align: right; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.fn { float: none; }
+
+.cb { clear: both; }
+
+.pr { position: relative; }
+
+.pa { position: absolute; }
+
+.pf { position: fixed; }
+
+.oHidden { overflow: hidden; }
+
+.vHidden { visibility: hidden; }
+
+.none { display: none !important; }
+
+.block { display: block !important; }
+
+.cl:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0;
+}
+
+
+/***********************************************************************
+* GlobalAudio style
+*/
+.globalAudio {
+	position: fixed;
+	right: 0.4rem;
+	bottom: 0.4rem;
+	z-index: 100;
+	width: 0.68rem;
+	height: 0.68rem;
+}
+
+.globalAudio .AudioIcons{
+	display: block;
+	width: 0.68rem;
+	height: 0.68rem;
+	background: url("../source/images/icons-music.png") no-repeat 0 0;
+	background-size: 1.36rem;
+}
+
+.globalAudio.play .AudioIcons {
+	background-position: -0.68rem 0;
+	-webkit-animation: rotateGlobalAudio 2s cubic-bezier(0, 0, 0, 0) infinite;
+	animation: rotateGlobalAudio 2s cubic-bezier(0, 0, 0, 0) infinite;
+}
+
+@-webkit-keyframes rotateGlobalAudio {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateGlobalAudio {
+	0% {
+		-moz-transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+.globalAudio .AudioTips{
+	position: absolute;
+	height: 0.68rem;
+	line-height: 0.68rem;
+	left: -0.3rem;
+	top: 0;
+	color: #fff;
+	font-size: 0.4rem;
+	text-shadow: 0.02rem 0.02rem 0.02rem #000;
+	-webkit-transition: all 0.2s linear;
+	letter-spacing: 0.05rem;
+	opacity: 0;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	word-break: keep-all;
+	white-space: nowrap;
+}
+
+.globalAudio .AudioTips.show{
+	left: -0.1rem;
+	opacity: 1;
+}
+
+
+
+
+
+
+
